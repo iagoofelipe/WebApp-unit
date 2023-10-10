@@ -18,6 +18,7 @@ def ver_produto(request):
         # return HttpResponse(pessoas[0].idade)
     
         pessoas_filtro = Pessoa.objects.filter(nome=nome)
+        print(request.POST)
         return HttpResponse(pessoas_filtro.all()[0].idade)
         
     

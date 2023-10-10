@@ -5,13 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'login/css/data-extraction-styles.css' %}">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+        // $("#form").text("")
+    </script>
+    <script src="{% static 'login/js/script.js' %}"></script>
+    
     <title>Unit - Login</title>
 </head>
 <body>
+    <div id="pop-up">
+        <p>-ALERT-</p>
+    </div>
     <div class="container-left">
-        <form class="container-login" action="/home/" method="post">{% csrf_token %}
+        <form id="form" class="container-login" action="" method="POST">{% csrf_token %}
             <h1>UNIT</h1>
             <input class="input-texto" type="text" name="user" placeholder="usuário">
             <input class="input-texto" type="password" name="password" placeholder="senha">
@@ -19,7 +29,7 @@
                 <input class="input-checkbox" type="checkbox" name="remember" id="remember">
                 <label class="texto-checkbox" for="remember">lembrar de mim</label>
             </div>
-            <input class="btn-login" type="submit" value="login">
+            <input class="btn-login" type="button" onclick="validate()" value="login">
         </form>
     </div>
     <div class="container-right">
