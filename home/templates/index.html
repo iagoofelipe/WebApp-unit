@@ -5,16 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-    <title>Unit - Login</title>
+    <!-- <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/data-extraction-styles.css' %}">
+    <title>Unit - Login</title> -->
 </head>
 <body>
-    <form action="{% url 'index' %}" method="post">{% csrf_token %}
-        <input type="text" name="user" placeholder="usuário">
-        <input type="password" name="password" placeholder="senha">
-        <input type="checkbox" name="remember">
-        <label for="remember">lembrar de mim</label>
-        <input type="submit" value="login">
-    </form>
+    home
+    <!-- <div class="container-left">
+        <form class="container-login" action="{% url 'index' %}" method="post">{% csrf_token %}
+            <h1>UNIT</h1>
+            <input class="input-texto" type="text" name="user" placeholder="usuário">
+            <input class="input-texto" type="password" name="password" placeholder="senha">
+            <div class="container-checkbox">
+                <input class="input-checkbox" type="checkbox" name="remember" id="remember">
+                <label class="texto-checkbox" for="remember">lembrar de mim</label>
+            </div>
+            <input class="btn-login" type="submit" value="login">
+        </form>
+    </div>
+    <div class="container-right">
+        <img src="{% static 'home/img/data-extraction-animate.svg' %}">
+    </div> -->
 </body>
 </html>
