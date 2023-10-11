@@ -76,11 +76,18 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-with open('connect.json', encoding='utf8') as f:
-    json_db = json.load(f)
+# with open('connect.json', encoding='utf8') as f:
+#     json_db = json.load(f)
+
+# DATABASES = {
+#     'default': json_db
+# }
 
 DATABASES = {
-    'default': json_db
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation
