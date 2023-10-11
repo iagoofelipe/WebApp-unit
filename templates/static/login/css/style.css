@@ -60,8 +60,10 @@ body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.322);
     padding: 15px 20px;
     width: 60%;
-    height: 60%;
+    /* height: 60%; */
+    height: 420px;
     justify-content: space-evenly;
+    transition-duration: .5s;
 }
 
 .input-texto {
@@ -96,6 +98,11 @@ body {
     transition-duration: .5s;
 }
 
+@media only screen and (max-width: 500px) {
+    .container-login {
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     body {
